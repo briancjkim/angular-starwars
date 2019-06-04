@@ -1,0 +1,46 @@
+<div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item" routerLinkActive="active">
+      <a routerLink="/characters" class="nav-link">All</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a routerLink="/characters/light" class="nav-link">Light</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a routerLink="/characters/dark" class="nav-link">Dark</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>
+<!-- <div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item" [ngClass]="{ acive: chosenSide === 'all' }">
+      <a
+        (click)="onChoose('all')"
+        style="cursor: pointer"
+        class="nav-link"
+        href="#"
+        >All</a
+      >
+    </li>
+    <li class="nav-item" [ngClass]="{ acive: chosenSide === 'light' }">
+      <a
+        (click)="onChoose('light')"
+        style="cursor: pointer"
+        class="nav-link"
+        href="#"
+        >Light</a
+      >
+    </li>
+    <li class="nav-item" [ngClass]="{ acive: chosenSide === 'dark' }">
+      <a
+        (click)="onChoose('dark')"
+        style="cursor: pointer"
+        class="nav-link "
+        href="#"
+        >Dark</a
+      >
+    </li>
+  </ul>
+  <app-list [characters]="getCharacters()"></app-list>
+</div> -->

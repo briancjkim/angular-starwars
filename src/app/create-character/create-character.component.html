@@ -1,0 +1,30 @@
+<!-- FormsModule을 사용한 ngSubmit에서는 preventDefault()가자동으로 실행된다. -->
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <div class="form-group">
+    <label for="name">Character Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      ngModel
+      required
+      #nameCtrl="ngModel"
+      placeholder="add name"
+    />
+    <span class="help-block" *ngIf="nameCtrl.invalid && nameCtrl.touched"
+      >Please enter the name</span
+    >
+  </div>
+  <div class="form-group">
+    <label for="side">Choose Side</label>
+    <select name="side" id="side" class="form-control" ngModel>
+      <option *ngFor="let option of availableSides" [value]="option.value">{{
+        option.display
+      }}</option>
+    </select>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">
+    Add Character
+  </button>
+</form>
