@@ -19,11 +19,11 @@ const router = [
     loadChildren:
       "./create-character/create-character.module#CreateCharacterModule"
   },
-  { path: "**", redirectTo: "/characters" }
+  { path: "**", redirectTo: "characters" }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(router)],
+  imports: [RouterModule.forRoot(router, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
